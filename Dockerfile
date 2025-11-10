@@ -1,6 +1,8 @@
 # Use the latest Node.js (v25) on Alpine Linux
 FROM node:25-alpine
 
+RUN apt-get update && apt-get install -y git && rm -rf /var/lib/apt/lists/*
+
 # Set working directory inside the container
 WORKDIR /app
 
