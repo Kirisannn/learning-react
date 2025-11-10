@@ -3,6 +3,9 @@ FROM node:25-alpine
 
 RUN apk add --no-cache git
 
+# Set Git identity inside the container
+RUN git config --global user.name "Kirisannn" && git config --global user.email "tanshangian@hotmail.com"
+
 # Set working directory inside the container
 WORKDIR /app
 
